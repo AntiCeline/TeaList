@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android">
+            <solid android:color="@color/pink"/>
+            <corners android:radius="25dp"
+                />
+        </shape>
+
+    </item>
+    <item>
+        <shape>
+            <!-- shape property for the view based on the value particular view would be drawn -->
+            <corners android:radius="25dp"
+                />
+            <stroke
+                android:width="0.9dp"
+                android:color="@color/black" />
+            <!--  stroke for defining a border for view -->
+
+            <size
+                android:width="40dp"
+                android:height="40dp" />
+            <!-- size element is used to define a design here height & width are same means square with some radius -->
+        </shape>
+    </item>
+</layer-list>
