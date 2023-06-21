@@ -68,7 +68,6 @@ public class RecyleViewAdapter extends RecyclerView.Adapter<RecyleViewAdapter.My
         ConstraintLayout parentLayout;
 
 
-
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             iv_teaPic = itemView.findViewById(R.id.iv_teaPicture);

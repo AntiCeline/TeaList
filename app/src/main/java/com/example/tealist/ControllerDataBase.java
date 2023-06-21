@@ -69,7 +69,6 @@ public class ControllerDataBase {
             listTea.add(tea);
         }
         res.close();
-
         return listTea;
     }
 

@@ -54,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "onCreate: "+ teaList.toString());
         //Toast.makeText(this, "TeaCount = " + teaList.size(), Toast.LENGTH_SHORT).show();
 
-
         btn_addOne = findViewById(R.id.btn_addOne);
 
         btn_addOne.setOnClickListener(new View.OnClickListener() {
