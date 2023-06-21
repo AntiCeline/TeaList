@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
         btn_addOne = findViewById(R.id.btn_addOne);
 
-        btn_addOne.setOnClickListener(new View.OnClickListener() {
+        btn_addOne.setOnClickListener(new View.OnClickListener() { // прописываем кнопку добавления
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,AddOne.class);
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        itemClickListener = new RecyleViewAdapter.onItemClickListener() {
+        itemClickListener = new RecyleViewAdapter.onItemClickListener() { // прописываем клик на объект
             @Override
             public void onItemClick(Tea tea, int position) {
                 Intent intent = new Intent(MainActivity.this, OnePage.class);

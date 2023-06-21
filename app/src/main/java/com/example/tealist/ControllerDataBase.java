@@ -33,7 +33,7 @@ public class ControllerDataBase {
         db = openHelper.getWritableDatabase();
     }
 
-    protected int update(Tea tea){
+    protected int update(Tea tea){ // обновляем поля бд
         ContentValues contentValues = new ContentValues();
         contentValues.put(COLUMN_NAME, tea.getName());
         contentValues.put(COLUMN_DISC, tea.getDescription());
@@ -41,7 +41,7 @@ public class ControllerDataBase {
         return db.update(TABLE_NAME, contentValues, COLUMN_ID + " = ?", new String[] {String.valueOf(tea.getId())});
     }
 
-    public Tea select(int id){
+    public Tea select(int id){ //выводим поля бд
         String query = "SELECT * FROM "+ TABLE_NAME + " WHERE "+ COLUMN_ID+" = "+ id;
         Cursor cursor = db.rawQuery(query, null);
         cursor.moveToNext();
@@ -49,11 +49,11 @@ public class ControllerDataBase {
                 cursor.getString(NUM_COLUMN_DISC), cursor.getString(NUM_COLUMN_PIC));
     }
 
-    protected void delete(long id) {
+    protected void delete(long id) { // удаляем поля
         db.delete(TABLE_NAME, COLUMN_ID + " = ?", new String[] { String.valueOf(id) });
     }
 
-    public long insert(Tea tea) {
+    public long insert(Tea tea) { // добавляем поля
         ContentValues contentValues = new ContentValues();
         contentValues.put(COLUMN_NAME, tea.getName());
         contentValues.put(COLUMN_DISC, tea.getDescription());

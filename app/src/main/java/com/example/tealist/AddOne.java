@@ -40,7 +40,7 @@ public class AddOne extends AppCompatActivity {
         Intent intent = getIntent();
         int teaId = intent.getIntExtra("teaId",-1);
 
-        btn_ok.setOnClickListener(new View.OnClickListener() {
+        btn_ok.setOnClickListener(new View.OnClickListener() { // создаем кнопку изменения
 
             int nextId= myApplication.getNextId();
             @Override
@@ -55,12 +55,13 @@ public class AddOne extends AppCompatActivity {
                     controllerDataBase.update(tea);
                     finish();
                 }
+
             }
         });
 
 
 
-        btn_cancel.setOnClickListener(new View.OnClickListener() {
+        btn_cancel.setOnClickListener(new View.OnClickListener() {// создаем кнопку отмены
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(AddOne.this,MainActivity.class);

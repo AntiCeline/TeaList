@@ -50,7 +50,7 @@ public class OnePage extends AppCompatActivity {
       update = findViewById(R.id.btn_update);
       delete = findViewById(R.id.btn_delete);
 
-      delete.setOnClickListener(new View.OnClickListener() {
+      delete.setOnClickListener(new View.OnClickListener() { // прописываем кнопку удаления
          @Override
          public void onClick(View view) {
             db.delete(teaId);
@@ -62,7 +62,7 @@ public class OnePage extends AppCompatActivity {
       disc.setText(tea.getDescription());
       Glide.with(this).load(tea.getImageURL()).into(pic);
 
-      update.setOnClickListener(new View.OnClickListener() {
+      update.setOnClickListener(new View.OnClickListener() { // прописываем кнопку изменения
          @Override
          public void onClick(View view) {
                   Intent intent = new Intent(OnePage.this,AddOne.class);
@@ -72,7 +72,7 @@ public class OnePage extends AppCompatActivity {
       });
 
 
-      cansel.setOnClickListener(new View.OnClickListener() {
+      cansel.setOnClickListener(new View.OnClickListener() { // прописываем кнопку отмены
          @Override
          public void onClick(View view) {
             Intent intent = new Intent(OnePage.this,MainActivity.class);

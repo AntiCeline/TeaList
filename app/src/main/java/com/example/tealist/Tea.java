@@ -6,7 +6,7 @@ public class Tea {
     private String name;
     private String description;
     private String imageURL;
-    public Tea(int id, String name, String description, String imageURL) {
+    public Tea(int id, String name, String description, String imageURL) { // создаем объект чая
         this.id = id;
         this.name = name;
         this.description = description;
@@ -23,6 +23,7 @@ public class Tea {
                 '}';
     }
 
+    // прописываем геттеры и сеттеры
     public int getId() {
         return id;
     }
